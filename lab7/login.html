@@ -1,0 +1,126 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script>
+    function validateForm() {
+      event.preventDefault(); /*fixed issues, but you lose that cool alert*/
+
+      var user = document.getElementById("user").value;
+      var password = document.getElementById("password").value;
+
+      if (user == "" || password == "") {
+        alert("Username and Password cannot be blank");
+      }
+      else {
+        window.location.href = "./question.html";
+      }
+
+
+    }
+
+  </script>
+
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .bg-image {
+      /* The image used */
+      background-image: url("scdi.jpg");
+
+      /* Add the blur effect */
+      filter: blur(2px);
+      -webkit-filter: blur(2px);
+
+      /* Full height */
+      height: 100%;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+    }
+
+    form * {
+      margin: 0.5rem;
+    }
+
+    h2 {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 40px;
+      font-weight: bold;
+      /* text-shadow: -1px 1px 2px #00000080,
+				  1px 1px 2px #00000080,
+				  1px -1px 0 #00000080,
+				  -1px -1px 0 #00000080; */
+
+      /* text-shadow: 0px 1px 4px #23430C; */
+
+    }
+
+    form {
+      font-size: 20px;
+    }
+
+    button {
+      margin: 1.5rem;
+      font-size: 20px;
+
+    }
+
+    /* Position text in the middle of the page/image */
+    .bg-text {
+      background-color: white;
+      /* Fallback color */
+      background-color: white;
+      /* Black w/opacity/see-through */
+      color: crimson;
+      font-weight: bold;
+      border: 3px solid #f1f1f1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 50%;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="bg-image"></div>
+
+  <div class="bg-text">
+    <h2>Santa Clara Friend Matcher</h2>
+
+    <body>
+
+      <form id="sign up">
+        <form user="myForm" onsubmit="return validateForm()" method="post">
+        Username*: <input type="text" id="user" required>
+          <br>
+        <form password="myForm" onsubmit="return validateForm()" method="post">
+        Password*: <input type="password" id="password" required>
+            <br>
+        <button onclick="validateForm();"> Login </button>
+      </form>
+  </div>
+
+
+</body>
+
+</html>

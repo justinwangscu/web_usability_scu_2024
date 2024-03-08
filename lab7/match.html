@@ -1,0 +1,91 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h2 {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 40px;
+      font-weight: bold;
+      /* text-shadow: -1px 1px 2px #00000080,
+				  1px 1px 2px #00000080,
+				  1px -1px 0 #00000080,
+				  -1px -1px 0 #00000080; */
+
+      /* text-shadow: 0px 1px 4px #23430C; */
+
+    }
+
+    button {
+      margin: 1rem;
+      font-size: 20px;
+
+    }
+
+    #matchpic {
+      width: 20rem;
+      border-radius: 50%;
+      padding: 5px;
+
+    }
+
+    .bg-image {
+      /* The image used */
+      background-image: url("scdi.jpg");
+
+      /* Add the blur effect */
+      filter: blur(2px);
+      -webkit-filter: blur(2px);
+
+      /* Full height */
+      height: 100%;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+
+    /* Position text in the middle of the page/image */
+    .bg-text {
+      background-color: white;
+      /* Fallback color */
+      background-color: white;
+      /* Black w/opacity/see-through */
+      color: crimson;
+      font-weight: bold;
+      border: 3px solid #f1f1f1;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 50%;
+      padding: 20px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="bg-image"></div>
+
+  <div class="bg-text">
+    <img src="./xanthus.jpg" id="matchpic">
+    <h2>You have a match!</h2>
+  </div>
+
+
+</body>
+
+</html>
