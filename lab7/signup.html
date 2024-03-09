@@ -35,8 +35,19 @@
       box-sizing: border-box;
     }
 
+    label.required-label:after {
+      content: " *";
+      color: red;
+    }
+    label {
+      color: black;
+    }
+
+    form {
+      margin: 0px;
+    }
     form * {
-      margin: 0.5rem;
+      margin: 0.1rem;
     }
 
     h2 {
@@ -111,22 +122,42 @@
 
       <form id="sign up">
         <form user="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
-          Username*: <input type="text" id="user" required>
-          <br>
-          <form password="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
-            Password*: <input type="password" id="password" required>
-            <br>
-            <form major="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
-              Major*: <input type="text" id="major" required>
-              <br>
-              <form year="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
-                Year*: <input type="text" id="year" required>
-                <br>
-                <form email="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
-                  SCU Email*: <input type="text" id="email" required>
-                  <br>
-                  <input type="submit" value="Sign Up" onclick="validateForm();">
-                </form>
+          <label class="required-label">
+            Username:
+          </label>
+          <input type="text" id="user" required>
+        </form>
+        <br>
+        <form password="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+          <label class="required-label">
+            Password:
+          </label>
+          <input type="password" id="password" required>
+        </form>
+        <br>
+        <form major="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+          <label class="required-label">
+            Major:
+          </label>
+          <input type="text" id="major" required>
+        </form>
+        <br>
+        <form year="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+          <label class="required-label">
+            Year:
+          </label>
+          <input type="text" id="year" required>
+        </form>
+        <br>
+        <form email="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+          <label class="required-label">
+            SCU Email:
+          </label>
+          <input type="text" id="email" required>
+        </form>
+        <br>
+        <input type="submit" value="Sign Up" onclick="validateForm();">
+      </form>
   </div>
 
 

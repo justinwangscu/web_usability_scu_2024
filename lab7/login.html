@@ -52,6 +52,14 @@
 
     }
 
+    label.required-label:after {
+      content:" *";
+      color: red;
+    }
+    label {
+      color: black;
+    }
+
     form * {
       margin: 0.5rem;
     }
@@ -111,11 +119,15 @@
 
       <form id="sign up">
         <form user="myForm" onsubmit="return validateForm()" method="post">
-        Username*: <input type="text" id="user" required>
-          <br>
+          <label class="required-label">Username: </label>
+          <input type="text" id="user" required>
+        </form>
+        <br>
         <form password="myForm" onsubmit="return validateForm()" method="post">
-        Password*: <input type="password" id="password" required>
-            <br>
+          <label class="required-label">Password:</label> 
+          <input type="password" id="password" required>
+        </form>
+        <br>
         <button onclick="validateForm();"> Login </button>
       </form>
   </div>
