@@ -1,0 +1,166 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    function validateForm() {
+
+      event.preventDefault();
+
+      var user = document.getElementById("user").value;
+      var password = document.getElementById("password").value;
+      var user = document.getElementById("user").value;
+      var password = document.getElementById("password").value;
+
+      if (user == "" || password == "" || major == "" || year == "" || email == "") {
+        alert("You must fill all fields.");
+      } else {
+        alert("You have signed up successfully!");
+        window.location.href = "./login.html";
+      }
+
+    }
+
+  </script>
+
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    label.required-label:after {
+      content: " *";
+      color: red;
+    }
+    label {
+      color: black;
+    }
+
+    form {
+      margin: 0px;
+    }
+    form * {
+      margin: 0.1rem;
+    }
+
+    h2 {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 40px;
+      font-weight: bold;
+      /* text-shadow: -1px 1px 2px #00000080,
+				  1px 1px 2px #00000080,
+				  1px -1px 0 #00000080,
+				  -1px -1px 0 #00000080; */
+
+      /* text-shadow: 0px 1px 4px #23430C; */
+
+    }
+
+    form {
+      font-size: 20px;
+    }
+
+    input[type="submit"] {
+      margin: 1.5rem;
+      font-size: 19px;
+
+    }
+
+    .bg-image {
+      /* The image used */
+      background-image: url("scdi.jpg");
+
+      /* Add the blur effect */
+      filter: blur(2px);
+      -webkit-filter: blur(2px);
+
+      /* Full height */
+      height: 100%;
+
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    /* Position text in the middle of the page/image */
+    .bg-text {
+      background-color: white;
+      /* Fallback color */
+      background-color: white;
+      /* Black w/opacity/see-through */
+      color: crimson;
+      font-weight: bold;
+      border: 3px solid #f1f1f1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      width: 50%;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="bg-image"></div>
+
+  <div class="bg-text">
+    <h2>Santa Clara Friend Matcher</h2>
+
+    <body>
+
+      <form id="sign up">
+        <form user="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+          <label class="required-label">
+            Username:
+          </label>
+          <input type="text" id="user" required>
+        </form>
+        <br>
+        <form password="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+          <label class="required-label">
+            Password:
+          </label>
+          <input type="password" id="password" required>
+        </form>
+        <br>
+        <form major="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+          <label class="required-label">
+            Major:
+          </label>
+          <input type="text" id="major" required>
+        </form>
+        <br>
+        <form year="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+          <label class="required-label">
+            Year:
+          </label>
+          <input type="text" id="year" required>
+        </form>
+        <br>
+        <form email="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+          <label class="required-label">
+            SCU Email:
+          </label>
+          <input type="text" id="email" required>
+        </form>
+        <br>
+        <input type="submit" value="Sign Up" onclick="validateForm();">
+      </form>
+  </div>
+
+
+</body>
+
+</html>
