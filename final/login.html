@@ -117,17 +117,17 @@
 
     <body>
 
-      <form id="sign up">
-        <form user="myForm" onsubmit="return validateForm()" method="post">
+      <form id="sign up" onsubmit="return validateForm()" method="post">
+        <div class="text-label-input">
           <label class="required-label">Username: </label>
-          <input type="text" id="user" required>
-        </form>
-        <br>
-        <form password="myForm" onsubmit="return validateForm()" method="post">
+          <input user="myForm" type="text" id="user" required>
+        </div>
+
+        <div class="text-label-input">
           <label class="required-label">Password:</label> 
-          <input type="password" id="password" required>
-        </form>
-        <br>
+          <input password="myForm" type="password" id="password" required>
+        </div>
+
         <button onclick="validateForm();"> Login </button>
       </form>
   </div>
